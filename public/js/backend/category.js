@@ -99,3 +99,24 @@ function edit(id) {
         }
     });
 }
+function delete_data(id){
+    $.ajax({
+        url: "/category/delete/" + id,
+        type: "POST",
+        data: {
+            _token: $("#csrf").val(),
+            type: 1,
+            id: id,
+        },
+        success: function (res) {
+            var dataResult = JSON.parse(res);
+            console.log(res);
+            if (dataResult.status) {
+                alert(dataResult.message);
+                reload_table();
+            } else {
+                alert('Error !');
+            }
+        }
+    });
+}

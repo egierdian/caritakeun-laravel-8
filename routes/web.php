@@ -38,4 +38,4 @@ Route::get('/category', [CategoryController::class, 'index']);
 Route::post('/category/post', [CategoryController::class, 'save']);
 Route::post('/category/post/{id}', [CategoryController::class, 'save']);
 Route::post('/category/edit/{id}', [CategoryController::class, 'edit']);
-Route::get('/category/delete', [UserController::class, 'index']);
+Route::post('/category/delete/{id}', [CategoryController::class, 'delete']);
