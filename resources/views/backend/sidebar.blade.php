@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Caritakeun</span>
+        <span class="brand-text font-weight-light font-weight-bold">CARITAKEUN</span>
     </a>
     <!-- Sidebar -->
     <div class="sidebar">
@@ -13,7 +13,7 @@
                 <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Hi, users.</a>
+                <a href="#" class="d-block">Hi, {{ Auth::user()->name }}</a>
             </div>
         </div>
         <!-- Sidebar Menu -->
@@ -22,7 +22,7 @@
                 <li class="nav-header">MENU CARITAKEUN</li>
                 <li class="nav-item">
                     <a href="/content" class="nav-link <?php if(Request::segment(1) == 'content'): echo 'active'; endif;?>">
-                        <i class="nav-icon far fa-circle"></i>
+                        <i class="nav-icon fas fa-book"></i>
                         <p>
                             Content
                             <span class="badge badge-info right">2</span>
@@ -31,7 +31,7 @@
                 </li>
                 <li class="nav-item">
                     <a href="/category" class="nav-link <?php if(Request::segment(1) == 'category'): echo 'active'; endif;?>">
-                        <i class="nav-icon far fa-circle"></i>
+                        <i class="nav-icon fas fa-th"></i>
                         <p>
                             Category
                         </p>
@@ -42,6 +42,14 @@
                         <i class="nav-icon far fa-user"></i>
                         <p>
                             User
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('logout') }}" class="nav-link">
+                        <i class="nav-icon far fa-user"></i>
+                        <p>
+                            Logout
                         </p>
                     </a>
                 </li>

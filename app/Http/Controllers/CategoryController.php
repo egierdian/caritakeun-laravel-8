@@ -12,7 +12,6 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $category = Category::all();
-        // dd($category);
         if ($request->ajax()) {
             $data = Category::select('*');
             return datatables()->of(Category::select('*'))
@@ -20,8 +19,8 @@ class CategoryController extends Controller
                 ->addColumn('action', function ($row) {
 
                     $btnView    = '<a href="javascript:void(0)" class="edit btn btn-primary btn-sm"><i class="far fa-delete"></i>View</a>';
-                    $btnEdit    = '<a href="javascript:void(0)" class="edit btn btn-warning btn-sm" onclick="edit('.$row->id.')"><i class="fa fa-pen-square"></i></a>';
-                    $btnDelete  = '<a href="javascript:void(0)" class="edit btn btn-danger btn-sm" onclick="delete_data('.$row->id.')"><i class="fa fa-trash-alt"></i></a>';
+                    $btnEdit    = '<a href="javascript:void(0)" class="edit btn btn-warning btn-sm mr-2" onclick="edit('.$row->id.')"><i class="fa fa-pen-square"></i></a>';
+                    $btnDelete  = '<a href="javascript:void(0)" class="edit btn btn-danger btn-sm mr-2" onclick="delete_data('.$row->id.')"><i class="fa fa-trash-alt"></i></a>';
 
                     return $btnEdit.$btnDelete;
                 })

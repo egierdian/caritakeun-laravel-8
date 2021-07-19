@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Category</h1>
+                    <h1 class="m-0 text-dark">User</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Category</li>
+                        <li class="breadcrumb-item active">User</li>
                     </ol>
                 </div>
             </div>
@@ -20,18 +20,26 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12" id="content-category">
+                <div class="col-12" id="content-user">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Add new category</h3>
+                            <h3 class="card-title">Add New User</h3>
                         </div>
-                        <form role="form" id="form-category" action="" method="POST">
+                        <form role="form" id="form-user" action="" method="POST">
                             <input type="hidden" name="_token" id="csrf" value="{{Session::token()}}">
-                            <input type="hidden" name="CategoryID">
+                            <input type="hidden" name="UserID">
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="Name">Name Category</label>
-                                    <input type="text" class="form-control" id="Name" placeholder="Enter name category">
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" id="Name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password">Email</label>
+                                    <input type="password" class="form-control" id="Password" placeholder="Enter password">
                                 </div>
                             </div>
                             <div class="card-footer justify-content-end">
@@ -51,11 +59,11 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <table id="table-category" class="table table-bordered table-hover">
+                            <table id="table-user" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th width="30px;">No.</th>
-                                        <th>Name Category</th>
+                                        <th>Name</th>
                                         <th width="100px;">Action</th>
                                     </tr>
                                 </thead>
