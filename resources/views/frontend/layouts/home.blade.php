@@ -11,7 +11,7 @@
                 <!-- <a class="btn custom-button-jumbotron">
                         <h5>Mulai Membaca</h5>
                     </a> -->
-                <a href="/dashboard" class="btn custom-button-jumbotron">
+                <a href="/login" class="btn custom-button-jumbotron">
                     <h5>Mulai Menulis</h5>
                 </a>
             </div>

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MainController;
 
@@ -17,9 +18,7 @@ use App\Http\Controllers\MainController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.layouts.home');
-});
+Route::get('/', [MainController::class, 'index']);
 
 #LOGIN
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
@@ -45,6 +44,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/category/post/{id}', [CategoryController::class, 'save'])->middleware('is_admin');
     Route::post('/category/edit/{id}', [CategoryController::class, 'edit'])->middleware('is_admin');
     Route::post('/category/delete/{id}', [CategoryController::class, 'delete'])->middleware('is_admin');
+
+    #CONTENT
+    Route::get('/content', [ContentController::class, 'index']);
+    Route::post('/content/post', [ContentController::class, 'save']);
+    Route::post('/content/post/{id}', [ContentController::class, 'save']);
+    Route::post('/content/edit/{id}', [ContentController::class, 'edit']);
+    Route::post('/content/delete/{id}', [ContentController::class, 'delete']);
+    Route::post('/content/list_category', [ContentController::class, 'listCategory']);
 
     #LOGOUT
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');

@@ -9,9 +9,9 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
+            <!-- <div class="image">
                 <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
-            </div>
+            </div> -->
             <div class="info">
                 <a href="#" class="d-block">Hi, {{ Auth::user()->name }}</a>
             </div>
@@ -29,7 +29,6 @@
                         </p>
                     </a>
                 </li>
-                <?php if (Auth::user()->is_admin == 1): ?>
                 <li class="nav-item">
                     <a href="/content" class="nav-link <?php if(Request::segment(1) == 'content'): echo 'active'; endif;?>">
                         <i class="nav-icon fas fa-book"></i>
@@ -38,6 +37,7 @@
                         </p>
                     </a>
                 </li>
+                <?php if (Auth::user()->is_admin == 1): ?>
                 <li class="nav-item">
                     <a href="/category" class="nav-link <?php if(Request::segment(1) == 'category'): echo 'active'; endif;?>">
                         <i class="nav-icon fas fa-th"></i>

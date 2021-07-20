@@ -49,16 +49,23 @@
                 <ul class="navbar-nav mr-auto">
                 </ul>
                 <div class="justify-content-end">
-                    <a class="nav-item nav-link btn custom-button-signin">
+                    <?php if (Auth::check()) : ?>
+                    <a href="{{route('dashboard')}}" class="nav-item nav-link btn custom-button-signin">    
+                        <h5>Dashboard</h5>
+                    </a>
+                    <?php else : ?>
+                    <a href="{{route('login')}}" class="nav-item nav-link btn custom-button-signin">    
                         <h5>Masuk</h5>
                     </a>
+                    <?php endif; ?>
+                    
                 </div>
 
             </div>
         </div>
     </nav>
     <!-- end navbar -->
-    
+
     @yield('content')
 
     <!-- footer -->

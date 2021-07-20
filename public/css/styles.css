@@ -18,7 +18,7 @@ body {
     background-color: #1A508B;
     border-radius: 35px;
 }
-.custom-button-signin h5 {
+.custom-button-signin h5{
     padding: 0px 20px;
     margin-top: -3px;
     margin-bottom: 0px;
@@ -30,6 +30,7 @@ body {
 .custom-jumbotron {
     padding-top: 10px;
     padding-bottom: 10px;
+    min-height: 600px;
 }
 .custom-heading-jumbotron {
     display: flex;
