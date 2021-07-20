@@ -20,7 +20,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12" id="content-content">
+                <div class="col-12" id="content-content" style="display: none;">
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Add New Content</h3>

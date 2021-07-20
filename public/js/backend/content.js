@@ -44,7 +44,7 @@ function save() {
         content: content,
     };
     // console.log(data_post);
-    if (title != '' || CategoryID != 'none' || content != '') {
+    if (title != '' && CategoryID != 'none' && content != '') {
         $.ajax({
             url: url,
             type: "POST",
@@ -54,9 +54,17 @@ function save() {
                 var dataResult = JSON.parse(res);
                 console.log(dataResult);
                 if (dataResult.status) {
-                    alert(dataResult.message);
+                    Swal.fire(
+                        'Success',
+                        dataResult.message,
+                        'success'
+                    );
                 } else {
-                    alert('Error');
+                    Swal.fire(
+                        'Error',
+                        'Error',
+                        'error'
+                    );
                 }
                 $('#btnSave').text('Save');
                 $('#btnSave').attr('disabled', false);
@@ -70,7 +78,11 @@ function save() {
         });
     }
     else {
-        alert('Please fill all the field !');
+        Swal.fire(
+            'Info',
+            'Please fill all the field !',
+            'info'
+        );
         $("#btnSave").text('Save');
         $("#btnSave").attr('disabled', false);
     }
@@ -124,10 +136,18 @@ function delete_data(id){
         success: function (res) {
             var dataResult = JSON.parse(res);
             if (dataResult.status) {
-                alert(dataResult.message);
+                Swal.fire(
+                    'Success',
+                    dataResult.message,
+                    'success'
+                );
                 reload_table();
             } else {
-                alert('Error !');
+                Swal.fire(
+                    'Error',
+                    'Error',
+                    'error'
+                );
             }
         }
     });

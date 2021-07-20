@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!-- Sweetalert2 -->
+    <link rel="stylesheet" href="{{asset('plugins/sweetalert2/sweetalert2.min.css')}}">
     
 </head>
 
@@ -219,6 +221,8 @@
     <script src="{{asset('dist/js/pages/dashboard.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{asset('dist/js/demo.js')}}"></script>
+    <script src="{{asset('plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+    <script src="{{asset('plugins/sweetalert2/sweetalert2.all.min.js')}}"></script>
     <?php if (Request::segment(1) == 'content') : ?>
     <script src="{{asset('js/backend/content.js')}}"></script>
     <?php endif; ?>

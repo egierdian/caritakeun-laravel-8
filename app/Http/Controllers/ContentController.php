@@ -81,7 +81,7 @@ class ContentController extends Controller
         $Content = Content::where('id',$id)->delete();
         if($Content):
             $status = true;
-            $message = 'Success delete data with id = '.$id;
+            $message = 'Success delete data';
         endif;
         echo json_encode(array("status" => $status, "data" => $Content, "message"=> $message));
     }
