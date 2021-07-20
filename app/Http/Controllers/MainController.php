@@ -29,7 +29,11 @@ class MainController extends Controller
         echo json_encode(array("count_user" => $count_user, "count_content" => $count_content));
     }
     public function detail($id = "") {
-        $data = Content::findOrFail($id);
+        // $data = Content::findOrFail($id)
+        $data = Content::join('categories', 'categories.id', '=', 'contents.category_id')
+        ->join('users', 'users.id', '=', 'contents.user_id')
+        ->select('contents.title','contents.content','categories.name as category','users.name as creator')
+        ->where('contents.id',$id)->first();
         return view('frontend.detail',compact('data'));
     }
 }

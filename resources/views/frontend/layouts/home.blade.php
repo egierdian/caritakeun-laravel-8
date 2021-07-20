@@ -28,13 +28,20 @@
     <div class="container">
         <div class="row custom-card-partner">
             <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-                <h2>Gramedia</h2>
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <h2>Gramedia</h2>
+                </div>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-                <h2>WikiBook</h2>
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <h2>WikiBook</h2>
+                </div>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-                <h2>BooksBooks</h2>
+
+                <div data-aos="fade-up" data-aos-duration="2000">
+                    <h2>BooksBooks</h2>
+                </div>
             </div>
         </div>
     </div>
@@ -49,13 +56,13 @@
             @foreach($data as $row)
             <div class="col-12 pb-3">
                 <a href="/detail/{{$row->id}}">
-                <div class="card custom-card">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $row->title}}</h5>
-                        <span class="badge badge-primary">{{ $row->creator }}</span>
-                        <span class="badge badge-info">{{ $row->category }}</span>
+                    <div class="card custom-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $row->title}}</h5>
+                            <span class="badge badge-primary">{{ $row->creator }}</span>
+                            <span class="badge badge-info">{{ $row->category }}</span>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
             @endforeach
@@ -71,7 +78,7 @@
         <h1>Tulis Ceritamu</h1>
         <div class="row custom-card-partner">
             <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2">
-                <div data-aos="fade-up" data-aos-duration="3000">
+                <div data-aos="fade-up" data-aos-duration="2000">
                     <div class="card custom-card">
                         <img class="card-img-top custom-img" src="{{asset('images/undraw_mobile_login_ikmv.png')}}" alt="Card image cap">
                         <div class="card-body">
@@ -91,7 +98,7 @@
                 </div>
             </div>
             <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2">
-                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000">
+                <div data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
                     <div class="card custom-card">
                         <img class="card-img-top custom-img" src="{{asset('images/undraw_publish_post_vowb.png')}}" alt="Card image cap">
                         <div class="card-body">

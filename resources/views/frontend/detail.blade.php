@@ -10,6 +10,8 @@
                     <div class="card-body">
                         <h3 style="font-weight: 600; margin-bottom:10px;">{{$data->title}}</h3>
                         {!! $data->content !!}
+                        <span class="badge badge-primary">{{ $data->creator }}</span>
+                        <span class="badge badge-info">#{{ $data->category }}</span>
                     </div>
                 </div>
             </div>
