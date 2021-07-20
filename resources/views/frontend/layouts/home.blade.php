@@ -41,6 +41,30 @@
 </div>
 <!-- end partner -->
 
+<!-- contents -->'
+<div class="custom-content">
+    <div class="container">
+        <h2>Cerita Terpublikasi</h2>
+        <div class="row">
+            @foreach($data as $row)
+            <div class="col-12 pb-3">
+                <a href="">
+                <div class="card custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $row->title}}</h5>
+                        <span class="badge badge-primary">{{ $row->creator }}</span>
+                        <span class="badge badge-info">{{ $row->category }}</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+            @endforeach
+            {!! $data->links() !!}
+        </div>
+    </div>
+</div>
+<!-- end-contents -->
+
 <!-- write-story -->
 <div class="custom-write-story">
     <div class="container">
@@ -85,6 +109,7 @@
 <div class="custom-benefit">
     <div class="container">
         <div class="row">
+            <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000" class="pb-2 ml-3">Benefit</h1>
             <div class="col-md-12 pt-2 pb-2">
                 <div data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
                     <div class="card custom-card">

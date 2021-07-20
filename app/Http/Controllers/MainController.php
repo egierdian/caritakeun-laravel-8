@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Content;
 use Session;
 
 class MainController extends Controller
 {
     public function index()
     {
-        return view('frontend.layouts.home');
+        $data = Content::join('users', 'users.id', '=', 'contents.user_id')
+        ->join('categories', 'categories.id', '=', 'contents.category_id')
+        ->select(['contents.title','categories.name as category','users.name as creator'])
+        ->paginate(5);
+        return view('frontend.layouts.home',compact('data'));
     }
     public function dashboard()
     {

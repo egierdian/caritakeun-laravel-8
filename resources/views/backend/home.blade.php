@@ -45,7 +45,7 @@
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3 id="count-content">53<sup style="font-size: 20px"></sup></h3>
+                            <h3 id="count-content">0<sup style="font-size: 20px"></sup></h3>
 
                             <p>Content Publish</p>
                         </div>
@@ -60,7 +60,7 @@
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3 id="count-user">44</h3>
+                            <h3 id="count-user">0</h3>
 
                             <p>User Registrations</p>
                         </div>

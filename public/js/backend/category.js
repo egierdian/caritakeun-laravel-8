@@ -47,9 +47,17 @@ function save() {
                 var dataResult = JSON.parse(res);
                 console.log(dataResult);
                 if (dataResult.status) {
-                    alert(dataResult.message);
+                    Swal.fire(
+                        'Success',
+                        dataResult.message,
+                        'success'
+                    );
                 } else {
-                    alert('Error');
+                    Swal.fire(
+                        'Error',
+                        'Error',
+                        'error'
+                    );
                 }
                 $('#btnSave').text('Save');
                 $('#btnSave').attr('disabled', false);
@@ -60,7 +68,11 @@ function save() {
         });
     }
     else {
-        alert('Please fill all the field !');
+        Swal.fire(
+            'Info',
+            'Please fill all the field !',
+            'info'
+        );
         $("#btnSave").text('Save');
         $("#btnSave").attr('disabled', false);
     }
@@ -89,12 +101,12 @@ function edit(id) {
         success: function (res) {
             console.log(res);
             var dataResult = JSON.parse(res);
-            console.log(dataResult);
+            // console.log(dataResult);
             if (dataResult.status) {
                 $('#content-category').show(300);
                 $('#Name').val(dataResult.data.name);
                 $('[name=CategoryID]').val(dataResult.data.id);
-                console.log(dataResult.data.id);
+                // console.log(dataResult.data.id);
             }
         }
     });
@@ -112,10 +124,18 @@ function delete_data(id){
             var dataResult = JSON.parse(res);
             console.log(res);
             if (dataResult.status) {
-                alert(dataResult.message);
+                Swal.fire(
+                    'Success',
+                    dataResult.message,
+                    'success'
+                );
                 reload_table();
             } else {
-                alert('Error !');
+                Swal.fire(
+                    'Error',
+                    'Error',
+                    'error'
+                );
             }
         }
     });
