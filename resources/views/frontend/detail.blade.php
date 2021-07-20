@@ -8,7 +8,7 @@
             <div class="col-12 pb-3">
                 <div class="card">
                     <div class="card-body">
-                        <h4>{{$data->title}}</h4>
+                        <h3 style="font-weight: 600; margin-bottom:10px;">{{$data->title}}</h3>
                         {!! $data->content !!}
                     </div>
                 </div>
