@@ -48,7 +48,7 @@
         <div class="row">
             @foreach($data as $row)
             <div class="col-12 pb-3">
-                <a href="">
+                <a href="/detail/{{$row->id}}">
                 <div class="card custom-card">
                     <div class="card-body">
                         <h5 class="card-title">{{ $row->title}}</h5>

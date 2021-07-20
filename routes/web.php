@@ -19,6 +19,7 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/detail/{id}', [MainController::class, 'detail']);
 
 #LOGIN
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
