@@ -19,6 +19,7 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index']);
+Route::get('/home', [MainController::class, 'content'])->name('content');
 Route::get('/detail/{id}', [MainController::class, 'detail']);
 
 #LOGIN

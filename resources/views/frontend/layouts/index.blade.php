@@ -23,7 +23,7 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white custom-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white custom-navbar <?php if(Request::segment(1) == "detail" || Request::segment(1) == "home"): echo "custom-shadow"; endif;?>">
         <div class="container">
             <a class="navbar-brand" href="/">
                 <h4>CARITAKEUN</h4>
@@ -69,7 +69,7 @@
     @yield('content')
 
     <!-- footer -->
-    <div class="custom-footer">
+    <div class="custom-footer custom-shadow ">
         <div class="container pt-4 pb-4">
             <div class="row">
                 <div class="col-md-11 col-s-12">

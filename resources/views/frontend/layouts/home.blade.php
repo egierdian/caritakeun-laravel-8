@@ -3,14 +3,14 @@
 @section('content')
 <!-- jumbotron -->
 <div class="container custom-jumbotron mt-2 mb-5">
-    <div class="row d-flex custom-section align-items-center">
+    <div class="row d-flex custom-section align-items-center" style="padding-top:50px;">
         <div class="col-md-6 custom-heading-jumbotron pt-2 pb-3">
             <div class="content-jumbotron">
-                <h1 style="font-weight: 700;">Ceritakan Apa yang Ingin Kamu Ungkapkan</h1>
+                <h1 style="font-weight: 700;">Ceritakan apa yang ingin Anda ungkapkan</h1>
                 <p>Baca atau tulis ceritamu sendiri.</p>
-                <!-- <a class="btn custom-button-jumbotron">
-                        <h5>Mulai Membaca</h5>
-                    </a> -->
+                <a href="/home" class="btn custom-button-jumbotron">
+                    <h5>Mulai Membaca</h5>
+                </a>
                 <a href="/login" class="btn custom-button-jumbotron">
                     <h5>Mulai Menulis</h5>
                 </a>
@@ -47,30 +47,6 @@
     </div>
 </div>
 <!-- end partner -->
-
-<!-- contents -->'
-<div class="custom-content">
-    <div class="container">
-        <h2>Cerita Terpublikasi</h2>
-        <div class="row">
-            @foreach($data as $row)
-            <div class="col-12 pb-3">
-                <a href="/detail/{{$row->id}}">
-                    <div class="card custom-card">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $row->title}}</h5>
-                            <span class="badge badge-primary">{{ $row->creator }}</span>
-                            <span class="badge badge-info">{{ $row->category }}</span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            @endforeach
-            {!! $data->links() !!}
-        </div>
-    </div>
-</div>
-<!-- end-contents -->
 
 <!-- write-story -->
 <div class="custom-write-story">

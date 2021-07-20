@@ -4,6 +4,7 @@ body {
 /* navbar */
 .custom-navbar {
     padding: 20px;
+    margin-bottom: -20px;
 }
 .custom-navbar h4 {
     font-size: 1.5rem;
@@ -64,7 +65,7 @@ body {
 
 /* write story */
 .custom-write-story {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
     /* padding: 65px 0px; */
     padding-top: 65px;
     padding-bottom: 30px;
@@ -163,4 +164,9 @@ body {
     .custom-partner-row {
         margin: 15px 0;
     }
+}
+
+/* STATIC */
+.custom-shadow {
+    box-shadow: 1px 1px 5px #c7c7c7;
 }
