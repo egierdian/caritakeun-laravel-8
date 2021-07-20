@@ -1,12 +1,4 @@
-var mobile = (/iphone|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
-var host = window.location.origin + '/';
-var url = window.location.href;
-var url_list = host + "admin/list_data/";
-var url_edit = host + "admin/edit/";
-var url_hapus = host + "admin/delete/";
-var url_active = host + "admin/active/";
-var url_simpan = host + "admin/save";
-var url_update = host + "admin/update";
+
 
 $(document).ready(function () {
     $('#example2').DataTable({

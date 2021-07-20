@@ -228,6 +228,9 @@
     <?php if (Request::segment(1) == 'category') : ?>
     <script src="{{asset('js/backend/category.js')}}"></script>
     <?php endif; ?>
+    <?php if (Request::segment(1) == 'dashboard') : ?>
+    <script src="{{asset('js/backend/dashboard.js')}}"></script>
+    <?php endif; ?>
 </body>
 
 </html>

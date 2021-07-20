@@ -105,7 +105,4 @@ class AuthController extends Controller
         Auth::logout(); // menghapus session yang aktif
         return redirect()->route('login');
     }
-    public function index(){
-        return view('backend.home');
-    }
 }

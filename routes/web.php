@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +29,8 @@ Route::post('register', [AuthController::class, 'register']);
 
 Route::group(['middleware' => 'auth'], function () {
     #DASHBOARD
-    Route::get('dashboard', [AuthController::class, 'index'])->name('dashboard');
+    Route::get('dashboard', [MainController::class, 'dashboard'])->name('dashboard');
+    Route::post('/dashboard/data', [MainController::class, 'data_dashboard']);
 
     #USER
     Route::get('/user', [UserController::class, 'index'])->middleware('is_admin');
