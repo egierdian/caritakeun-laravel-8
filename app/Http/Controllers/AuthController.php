@@ -13,8 +13,7 @@ class AuthController extends Controller
 {
     public function showLogin()
     {
-        if (Auth::check()) { // true sekalian session field di users nanti bisa dipanggil via Auth
-            //Login Success
+        if (Auth::check()) { 
             return redirect()->route('dashboard');
         }
         return view('login');
@@ -47,13 +46,9 @@ class AuthController extends Controller
   
         Auth::attempt($data);
   
-        if (Auth::check()) { // true sekalian session field di users nanti bisa dipanggil via Auth
-            //Login Success
+        if (Auth::check()) {
             return redirect()->route('dashboard');
-  
-        } else { // false
-  
-            //Login Fail
+        } else {
             Session::flash('error', 'Email atau password salah');
             return redirect()->route('login');
         }

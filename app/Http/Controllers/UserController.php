@@ -11,6 +11,10 @@ use Datatables;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(Request $request)
     {
         $category = User::all();
@@ -23,7 +27,7 @@ class UserController extends Controller
                     $btnEdit    = '<a href="javascript:void(0)" class="edit btn btn-warning btn-sm mr-2" onclick="edit('.$row->id.')"><i class="fa fa-pen-square"></i></a>';
                     $btnDelete  = '<a href="javascript:void(0)" class="edit btn btn-danger btn-sm mr-2" onclick="delete_data('.$row->id.')"><i class="fa fa-trash-alt"></i></a>';
 
-                    return $btnDelete;
+                    return $btnEdit.$btnDelete;
                 })
                 ->rawColumns(['action'])
                 ->make(true);
@@ -40,13 +44,15 @@ class UserController extends Controller
             'password' => 'required|min:6',
         ]);
         if($id):
-            $user = new User;
-            $user->name = ucwords(strtolower($req->name));
-            $user->email = strtolower($req->email);
-            $user->password = Hash::make($req->password);
-            $user->email_verified_at = \Carbon\Carbon::now();
-            // $data = $user->save();
-            $data = User::find($id)->update($user); 
+            #CARA I
+            // $data = User::find($id)->update($user); 
+
+            $User = User::findOrFail($id);
+            $data = $User->update([
+                'name'     => ucwords(strtolower($req->name)),
+                'email'    => strtolower($req->email),
+                'password' => Hash::make($req->password)
+            ]);
             $message = 'Success edit data';
         else:
             $user = new User;

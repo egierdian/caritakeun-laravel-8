@@ -20,11 +20,6 @@ Route::get('/', function () {
     return view('frontend.layouts.home');
 });
 
-Route::get('/dashboard',[UserController::class, 'index']);
-Route::get('/content',function () {
-    return view('backend.content.list');
-});
-
 #LOGIN
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('login', [AuthController::class, 'login']);
@@ -35,19 +30,19 @@ Route::group(['middleware' => 'auth'], function () {
     #DASHBOARD
     Route::get('dashboard', [AuthController::class, 'index'])->name('dashboard');
 
-    #CONTENT
-    Route::get('/user', [UserController::class, 'index']);
-    Route::post('/user/post', [UserController::class, 'save']);
-    Route::post('/user/post/{id}', [UserController::class, 'save']);
-    Route::post('/user/edit/{id}', [UserController::class, 'edit']);
-    Route::post('/user/delete/{id}', [UserController::class, 'delete']);
+    #USER
+    Route::get('/user', [UserController::class, 'index'])->middleware('is_admin');
+    Route::post('/user/post', [UserController::class, 'save'])->middleware('is_admin');
+    Route::post('/user/post/{id}', [UserController::class, 'save'])->middleware('is_admin');
+    Route::post('/user/edit/{id}', [UserController::class, 'edit'])->middleware('is_admin');
+    Route::post('/user/delete/{id}', [UserController::class, 'delete'])->middleware('is_admin');
 
     #CATEGORY
-    Route::get('/category', [CategoryController::class, 'index']);
-    Route::post('/category/post', [CategoryController::class, 'save']);
-    Route::post('/category/post/{id}', [CategoryController::class, 'save']);
-    Route::post('/category/edit/{id}', [CategoryController::class, 'edit']);
-    Route::post('/category/delete/{id}', [CategoryController::class, 'delete']);
+    Route::get('/category', [CategoryController::class, 'index'])->middleware('is_admin');
+    Route::post('/category/post', [CategoryController::class, 'save'])->middleware('is_admin');
+    Route::post('/category/post/{id}', [CategoryController::class, 'save'])->middleware('is_admin');
+    Route::post('/category/edit/{id}', [CategoryController::class, 'edit'])->middleware('is_admin');
+    Route::post('/category/delete/{id}', [CategoryController::class, 'delete'])->middleware('is_admin');
 
     #LOGOUT
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
