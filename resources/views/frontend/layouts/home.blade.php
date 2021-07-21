@@ -22,34 +22,18 @@
     </div>
 </div>
 <!-- end jumbotron -->
-
 <!-- partner -->
 <div class="custom-partner">
-    <div class="container">
-        <div class="row custom-card-partner">
-            <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-                <div data-aos="fade-up" data-aos-duration="2000">
-                    <h2>Gramedia</h2>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-                <div data-aos="fade-up" data-aos-duration="2000">
-                    <h2>WikiBook</h2>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 pb-2 pt-2 custom-partner-row">
-
-                <div data-aos="fade-up" data-aos-duration="2000">
-                    <h2>BooksBooks</h2>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </div>
 <!-- end partner -->
 
 <!-- write-story -->
 <div class="custom-write-story">
+    
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-bottom: -5vw; height:100%">
+        <path fill="#ffffff" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,186.7C672,192,768,224,864,218.7C960,213,1056,171,1152,154.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+    </svg> -->
     <div class="container">
         <h1>Tulis Ceritamu</h1>
         <div class="row custom-card-partner">

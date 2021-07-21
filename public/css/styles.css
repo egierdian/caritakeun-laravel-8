@@ -31,7 +31,7 @@ body {
 .custom-jumbotron {
     padding-top: 10px;
     padding-bottom: 10px;
-    min-height: 600px;
+    min-height:650px;
 }
 .custom-heading-jumbotron {
     display: flex;
@@ -52,8 +52,19 @@ body {
 }
 /* partner */
 .custom-partner {
-    background-color: #f3f3f3;
-    padding: 55px 0px;
+    /* background-color: #f3f3f3;
+    padding: 55px 0px; */
+    background-image: url("../dist/img/photo1.png");
+
+    /* Set a specific height */
+    min-height: 350px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 }
 .custom-card-partner {
     text-align: center;
@@ -66,9 +77,7 @@ body {
 /* write story */
 .custom-write-story {
     /* background-color: #f3f3f3; */
-    /* padding: 65px 0px; */
-    padding-top: 65px;
-    padding-bottom: 30px;
+    padding: 65px 0px;
 }
 .custom-write-story h1 {
     text-align: center;

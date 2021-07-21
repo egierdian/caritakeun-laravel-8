@@ -3,8 +3,8 @@
 @section('content')
 <!-- contents -->
 <div class="custom-content" style="background:#f7f7f7;min-height: 400px;margin-top:20px">
-        <div class="row">
-    <div class="container">
+    <div class="row">
+        <div class="container">
             <div class="col-12 pb-3">
                 <div class="card " style="border:none; box-shadow: 1px 1px 5px #c7c7c7; border-radius:5px;">
                     <div class="card-body">
