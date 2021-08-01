@@ -179,3 +179,9 @@ body {
 .custom-shadow {
     box-shadow: 1px 1px 5px #c7c7c7;
 }
+.shadow-login-register{
+    border:none; 
+    box-shadow: 2px 3px 38px 17px rgba(164,164,164,0.32);
+    -webkit-box-shadow: 2px 3px 38px 17px rgba(164,164,164,0.32);
+    -moz-box-shadow: 2px 3px 38px 17px rgba(164,164,164,0.32);
+}
